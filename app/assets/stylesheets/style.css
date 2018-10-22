@@ -1,0 +1,247 @@
+body {
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+    line-height: 1.77;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-family: sans-serif;
+    margin:0;
+    padding:0;
+}
+.wrapper{
+  float:left;
+}
+#header{
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+.yohaku2 h1{
+  color:#dbd9dc;
+}
+.heading{
+  width:100%;
+  background-color:#dbd9dc;
+  top: 0px;
+  left: 0px;      
+	position: fixed; 
+  display: block;
+  margin: auto;
+	text-align: center;
+}
+.yohaku{
+  height:65px;
+}
+.menyubar{
+  width:100%;
+}
+.hanbun{
+  width:50%;
+  height:63px;
+  display:inline-block;
+  vertical-align:top; /*縦方向の揃え位置を指定*/
+  float:left;
+}
+.top img{
+  height:50px;
+  display:inline-block;
+  vertical-align:top; /*縦方向の揃え位置を指定*/
+}
+.ueue{
+  font-size:30px;
+}
+.nav {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  float: right;
+}
+.nav li {
+  position: relative;
+  list-style: none;
+}
+.nav li a {
+  display: block;
+  width:100px;
+  height:50px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 3.2;
+  background: #333;
+  text-decoration: none;
+  border-right: 1px solid #333;
+}
+.nav > li:hover > a {
+  color: orange;
+  background: #4a4a4a;
+}
+.nav > li li:hover > a {
+  color:#ff7f7f;
+  background: #4a4a4a;
+}
+.nav li ul {
+  left: -40px;
+  position: absolute;
+}
+.nav li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: 0.2s;
+}
+.nav li ul li a {
+  border-top: 1px solid #333;
+  float: right;
+}
+.nav li:hover > ul > li {
+
+  height:50px;
+}
+  .nav li ul li ul {
+    top: 0;
+    left: 110px;
+  }
+  .nav li ul li ul:before {
+  }
+  .nav li ul li ul li:hover > a {
+    color: pink;
+    background:#4a4a4a;
+  }
+  .nav li ul li ul.left {
+  }
+  .nav li ul li ul.left:before,
+  .nav li ul li ul li ul.left:before {
+    content: "";
+  }
+  .nav li ul li ul.left li:hover > a {
+    background:#4a4a4a;
+  }
+  .nav li ul li ul li ul.left li:hover > a {
+    background:#4a4a4a;
+  }
+.setumei{
+  width:100%;
+  text-align:center;
+  display: block;
+  margin: auto;
+  background-color:#e87a7a;
+}
+.setumei img{
+  width:200px;
+}
+.setumei h1{
+  font-size: 70px;
+  color:white;
+}
+.setumei_haikei{
+  width:100%;
+}
+#nav {
+  list-style: none;
+  display: flex;
+}
+#nav li {
+  width: 140px;
+  text-align: center;
+  background-color: #333;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}
+
+#nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+#nav li:hover{
+    background-color: #4a4a4a;
+}
+#nav li a:hover{
+    color: orange;
+}
+.bodying{
+  width: 78%;
+  float: left;
+}
+.box11{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    float:left;
+}
+.box11 p {
+    margin: 0; 
+    padding: 0;
+}
+.posts{
+  float:right;
+  color:black;
+}
+.saido{
+  width: 20%;
+  float: right;
+  text-align: center;
+}
+
+.saido_gazou img{
+  width:100%;
+}
+.fooding{
+  width: 100%;
+  background-color: #dbd9dc;
+  text-align: center;
+  float: left;
+  text-decoration: none
+}
+.kopiraito{
+    font-size: 40px;
+}
+.contents row{
+  float: left;
+}
+.modoru{
+  float: left;
+}
+
+@media screen and (max-width: 1600px){
+.ueue{
+  /*width:0px;*/
+  /*height:0px;*/
+  display:inline;
+}
+}
+
+/*アクセスした端末が480px以下の処理*/
+@media screen and (max-width: 818px){
+.ueue{
+  /*width:0px;*/
+  /*height:0px;*/
+  display: none;
+}
+.saido{
+  width:80;
+  
+}
+}
+@media screen and (max-width: 480px){
+.ueue{
+  /*width:0px;*/
+  /*height:0px;*/
+  display: none;
+}
+.top{
+  display: none;
+}
+
+}
+
+

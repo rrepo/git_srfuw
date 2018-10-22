@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @srfuw.each do |srfuw| %>
+      <%= simple_format(srfuw.text) %>
+      <span class="name"><%= srfuw.name %></span>
+    </div>
+  <% end %>
+  <%= paginate(@srfuw) %>
+</div>

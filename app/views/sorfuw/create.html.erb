@@ -1,14 +1,26 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <title>Srfuw</title>-->
+<!--  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>-->
+<!--  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
+<!--  <%= csrf_meta_tags %>-->
+<!--  <meta charset ="UTF-8" />-->
+<!--  <title>Srfuw</title>-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  
+<!--</head>-->
 <header>
   <div class="menyubar">
   <div class="heading">
     <!--<div class="yohaku2"><h1>　</h1></div>-->
-   <%= link_to image_tag("srfuw_mizika_touka.png"), "srfuw", class:"top"%>
+   <a href="srfuw" class="top"><img src="assets/srfuw_mizika_touka.png"  class="spNone"></a>
    <a class="ueue" href"srfuw">Sofuw</a>
    <ul class="nav">
 <!--</li>-->
 <li><a href="#">Sofuwとは</a>
 <ul>
-<li><a href="#">Sofuwの目的</a></li>
+<li><a href="#">srfuwの目的</a></li>
 <li><a href="#">お問い合わせ</a></li>
 <li><a href="#">利用規約</a></li>
 </ul>
@@ -45,7 +57,8 @@
   </div>
     <div class="yohaku"></div>
     <div class="setumei">
-    <%= link_to image_tag("srfuw_mizika_touka.png"), "https://www.google.com", class: "setumei" %>
+    <img src="assets/srfuw_mizika_touka.png" class="setumei"></img>
+    <!--<img src="image/black0036.png" class="setumei_haikei"></img>-->
     <h1>ようこそ</h1>
     </div>
     </div>
@@ -53,10 +66,10 @@
 <body>
       <div class="yohaku"><h1></h1></div>
       <div class="saido" >
-        <%= link_to image_tag("srfuw_mizika_touka.png"), "https://www.google.com", class: "saido_gazou" %>
+        <a href="" class="saido_gazou"><img src="assets/srfuw_mizika_touka.png"></img></a>
         <h1>Sofuwとは？<br>詳しくは上の画像をクリック</h1>
         <p></p>
-        <%= link_to image_tag("hanpen_aikon.jpg"), "https://www.google.com", class: "saido_gazou" %>
+        <a href="" class="saido_gazou"><img src="assets/hanpen_aikon.jpg"  alt="aaa"></a>
         <h1>Sofuwは<br>はんぺん教を支援しています</h1>
         <h1>上の画像をはんぺんをクリックしてはんぺん教へ！</h1>
       </div>
@@ -69,33 +82,17 @@
   <div class="zentai">
       <div class="bodying">
           <div class="box11">
-            
-            <div class="contents row">
-  <div class="content_post">
-    <% if user_signed_in? && current_user.id == @srfuw.user_id %>
-    
-    <% end %>
-    <p><%= simple_format(@srfuw.text) %>/<%= @srfuw.user.nickname %></p>
-  </div>
-  <div class="comments">   
-      <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-          </p>
-        <% end %>
-      <% end %>
-    </div>
-  <div class="container"> 
-    <!-- ここからフォーム -->
-    <% if current_user %>
-      <%= form_tag("/tweets/#{@srfuw.id}/comments", method: :post) do %>
-        <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
-        <input type="submit" value="SENT">
-      <% end %>
-    <% end %>
+<div class="contents row" >
+<% @sorfuw.each do |sorfuw| %>
+   <p><%= sorfuw.text %>/<%= sorfuw.user.nickname %>
+   <%= link_to '部屋に入る', "/sorfuw/#{sorfuw.id}", method: :get ,class: 'posts'%>
+   <% if user_signed_in? && current_user.id == sorfuw.user_id %>
+   <%= link_to '削除|', "/sorfuw/#{sorfuw.id}", method: :delete ,class: 'posts'%>
+   <%= link_to '編集|', "/sorfuw/#{sorfuw.id}/edit", method: :get ,class: 'posts'%></p>
+   <% end %>
+   <hr>
+<% end %>
+<%= paginate(@sorfuw) %>
 </div>
           </div>
       </div>
@@ -107,4 +104,3 @@
   </div>
 </footer>
 </html>
-

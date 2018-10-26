@@ -25,6 +25,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .heading{
   width:100%;
+  height:5%;
   background-color:#dbd9dc;
   top: 0px;
   left: 0px;      
@@ -66,12 +67,12 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .nav li a {
   display: block;
-  width:100px;
-  height:50px;
+  width:100%;
+  height:100%;
   text-align: center;
   color: #fff;
-  font-size: 15px;
-  line-height: 3.2;
+  font-size:100%;
+  line-height:100%;
   background: #333;
   text-decoration: none;
   border-right: 1px solid #333;
@@ -99,11 +100,11 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .nav li:hover > ul > li {
 
-  height:50px;
+  height:100%;
 }
   .nav li ul li ul {
     top: 0;
-    left: 110px;
+    /*left: 110px;*/
   }
   .nav li ul li ul:before {
   }
@@ -131,10 +132,10 @@ h1,h2,h3,h4,h5,h6,p {
   background-color:#e87a7a;
 }
 .setumei img{
-  width:200px;
+  width:20%;
 }
 .setumei h1{
-  font-size: 70px;
+  font-size:50px;
   color:white;
 }
 .setumei_haikei{
@@ -145,7 +146,7 @@ h1,h2,h3,h4,h5,h6,p {
   display: flex;
 }
 #nav li {
-  width: 140px;
+  width: 20%;
   text-align: center;
   background-color: #333;
   height: 50px;
@@ -158,6 +159,7 @@ h1,h2,h3,h4,h5,h6,p {
   color: #fff;
   font-weight: bold;
   padding: 20px;
+  font-size: 100%;
 }
 #nav li:hover{
     background-color: #4a4a4a;
@@ -241,7 +243,13 @@ h1,h2,h3,h4,h5,h6,p {
 .top{
   display: none;
 }
-
+.saido{
+  width:0px;
+  height:0px;
+}
+.box11{
+  width:100%;
+}
 }
 
 
